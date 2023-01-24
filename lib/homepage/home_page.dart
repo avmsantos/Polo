@@ -7,6 +7,14 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage(
+              'images/fundo.png',
+            ),
+            fit: BoxFit.cover,
+          ),
+        ),
         padding: const EdgeInsets.all(28),
         child: Column(
           children: [
@@ -14,25 +22,55 @@ class HomePage extends StatelessWidget {
               alignment: Alignment.centerLeft,
               child: Text(
                 'Login',
+                style: TextStyle(
+                  fontSize: 25,
+                ),
+              ),
+            ),
+            const Align(
+              alignment: Alignment.centerLeft,
+              child: Text(
+                'Usuario',
+                style: TextStyle(fontSize: 20, height: 3),
+              ),
+            ),
+            const TextField(
+              decoration: InputDecoration(
+                border: OutlineInputBorder(),
+                labelText: 'Usuario...',
+              ),
+            ),
+            const Align(
+              alignment: Alignment.centerLeft,
+              child: Text(
+                'Senha',
+                style: TextStyle(fontSize: 20, height: 3),
               ),
             ),
             const TextField(
               obscureText: true,
               decoration: InputDecoration(
                 border: OutlineInputBorder(),
-                labelText: 'Login',
+                labelText: 'Senha...',
               ),
             ),
-            const TextField(
-              obscureText: true,
-              decoration: InputDecoration(
-                border: OutlineInputBorder(),
-                labelText: 'Senha',
+            Align(
+              alignment: Alignment.centerLeft,
+              child: ElevatedButton(
+                style: ButtonStyle(
+                  minimumSize: MaterialStateProperty.all(const Size(100, 40)),
+                  padding: MaterialStateProperty.all(const EdgeInsets.all(10)),
+                  backgroundColor: MaterialStateProperty.all(
+                    const Color(0xff3072B3),
+                  ),
+                  //padding: EdgeInsetsGeometry
+                ),
+                onPressed: () {},
+                child: const Text(
+                  'Logar',
+                  style: TextStyle(fontSize: 23),
+                ),
               ),
-            ),
-            ElevatedButton(
-              onPressed: () {},
-              child: const Text('Logar'),
             ),
             Card(
               elevation: 0,
