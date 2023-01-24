@@ -56,19 +56,23 @@ class HomePage extends StatelessWidget {
             ),
             Align(
               alignment: Alignment.centerLeft,
-              child: ElevatedButton(
-                style: ButtonStyle(
-                  minimumSize: MaterialStateProperty.all(const Size(100, 40)),
-                  padding: MaterialStateProperty.all(const EdgeInsets.all(10)),
-                  backgroundColor: MaterialStateProperty.all(
-                    const Color(0xff3072B3),
+              child: Padding(
+                padding: const EdgeInsets.symmetric(vertical: 20),
+                child: ElevatedButton(
+                  style: ButtonStyle(
+                    minimumSize: MaterialStateProperty.all(const Size(100, 45)),
+                    padding:
+                        MaterialStateProperty.all(const EdgeInsets.all(10)),
+                    backgroundColor: MaterialStateProperty.all(
+                      const Color(0xff3072B3),
+                    ),
+                    //padding: EdgeInsetsGeometry
                   ),
-                  //padding: EdgeInsetsGeometry
-                ),
-                onPressed: () {},
-                child: const Text(
-                  'Logar',
-                  style: TextStyle(fontSize: 23),
+                  onPressed: () {},
+                  child: const Text(
+                    'Logar',
+                    style: TextStyle(fontSize: 20),
+                  ),
                 ),
               ),
             ),
